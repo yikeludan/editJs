@@ -3,8 +3,9 @@ README
 内部开源的html5 可视化拖拽编辑器 魔方 最初版本代码  最初版本核心代码 由本人编写  并交给公司内部孵化维护
 
 
-截图
-![image](https://github.com/MaiEmily/map/blob/master/public/image/20190528145810708.png)
+截图 内部完成版本 更加美观简洁 功能更多  页面不好看 是因为本人css 与审美没这么强 该版本还有一些bug 和右边图层页面没实现 
+正式版本均已修复和实现  
+![image](https://forum.cocos.org/uploads/default/original/3X/6/1/61c206b07fed3043d9b6328c4dbbb2066c8ae331.jpeg)
 
 
 
@@ -19,6 +20,10 @@ README
     *自定义字体的切换 
 
     *调色板功能(内部编写版本 github没有放出)
+
+    *图层切换图层合并(内部编写版本 github没有放出)
+
+    *图层融合 html5代码保存(内部编写版本 github没有放出)
 
     *canvas 和html画板切换(内部编写版本 github没有放出)
 
