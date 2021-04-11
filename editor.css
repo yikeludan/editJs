@@ -1,0 +1,619 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+@keyframes scaleDraw {  /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+    0%{
+        transform: scale(1);  /*开始为原始大小*/
+    }
+    25%{
+        transform: scale(1.2); /*放大1.1倍*/
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.2);
+    }
+}
+
+
+.main{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+.tempBox{
+    width: 1px;
+    height: 1px;
+    border-radius: 5px;
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    background-color: #b30300;
+}
+.line{
+    width: 1px;
+    height: 5px;
+    background-color: #b30300;
+    position: absolute;
+    transform-origin: left;
+    transform: rotate(0deg);
+}
+.boxInput{
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    left: 300px;
+    display:none;
+    top: 100px;
+
+}
+.left{
+    width: 4vw;
+    height: 100vh;
+    text-align: center;
+    border-right: 1px solid rgba(36, 34, 34, 0.11);
+    box-shadow: rgba(187, 187, 187, 0.27) 1px 1px ;
+    position: relative;
+}
+.l1{
+}
+.l2{
+    display: none;
+}
+.l3{
+    display: none;
+}
+.l4{
+    display: none;
+}
+.leftSel{
+    width: 17vw;
+    height: 100vh;
+    position: relative;
+    overflow-y: auto;
+}
+.leftSel_title{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+
+    justify-content:space-around;
+    height: 10vh;
+
+}
+.picBg{
+    margin-left: 0vw;
+}
+
+.leftSel_Line{
+    width: 100%;
+    border: 1px solid rgba(36, 34, 34, 0.11);
+
+}
+.leftSel_title1{
+    font-size: 25px;
+    color: rgba(33, 122, 208, 0.75);
+    cursor: pointer;
+}
+.leftSel_title2{
+    font-size: 20px;
+    color: rgba(36, 34, 34, 0.47);
+    cursor: pointer;
+
+}
+.leftSel_clour{
+    font-size: 20px;
+    color: rgba(33, 122, 208, 0.75);
+    cursor: pointer;
+}
+.picList{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:space-around;
+}
+.pic_clour{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.clour{
+    width: 2vw;
+    height: 4vh;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    border-radius: 3px;
+   /* animation-name: scaleDraw; !*关键帧名称*!
+    animation-timing-function: ease-in-out; !*动画的速度曲线*!
+    animation-iteration-count: infinite;  !*动画播放的次数*!
+    animation-duration: 2s; !*动画所花费的时间*!*/
+}
+.onePic{
+    width: 80%;
+    height: 40vh;
+    margin-top: 2vh;
+    background-size: 100% 100%;
+
+}
+.onePic1{
+    background-image: url("https://cdn.cnbj1.fds.api.mi-img.com/middle.community.vip.bkt/922ce605c4ebf55c36bba7dafa2a77e1");
+
+
+}
+
+.onePic2{
+    background-image: url("https://cdn.cnbj1.fds.api.mi-img.com/middle.community.vip.bkt/4b97ab3246c32dc63daa7d06b6a97ab5");
+
+}
+
+.onePic3{
+    background-image: url("https://cdn.cnbj1.fds.api.mi-img.com/middle.community.vip.bkt/ed85e4e6690563a90ad4616d7ef3d801");
+
+}
+.picText0{
+    margin-top: 3vh;
+    cursor: pointer;
+}
+.picText1{
+    font-size: 30px;
+}
+.picText2{
+    font-size: 20px;
+}
+
+.picText3{
+    font-size: 15px;
+}
+
+.picText4{
+    font-size: 15px;
+    font-weight: bold;
+}
+.rect{
+    width: 90%;
+    line-height: 30px;
+    border: 1px solid #999999;
+    text-align: center;
+    font-size: 20px;
+    color: rgba(33, 122, 208, 0.75);
+
+    cursor: pointer;
+
+}
+.rect:hover{
+    color: #383838;
+    background-color: #999999;
+}
+
+.picText5{
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+}
+.leftVal{
+    width: 59vw;
+    height: 100vh;
+    background-color: #999999;
+}
+.editMain{
+    width: 60vw;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(127, 93, 70, 0.07);
+}
+.ruleX{
+    width: 100%;
+    height:20px;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    z-index: 100;
+    cursor: n-resize;
+    background-color: rgba(49, 44, 44, 0.15);
+
+}
+.YLine{
+    width: 1px;
+    height:100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    background-color: #4ab157;
+    z-index: 99;
+}
+.XLine{
+    width: 58.2%;
+    height:1px;
+    position: absolute;
+    left: 22%;
+    top: 0;
+    display: none;
+    background-color: #4ab157;
+    z-index: 99;
+}
+.lineBox{
+    width: 50px;
+    position: absolute;
+    left: 24%;
+    text-align: center;
+    top:200px;
+    display: none;
+    background-color: white;
+    opacity: 0.5;
+    z-index: 99;
+
+}
+.ruleY{
+    width: 20px;
+    height:100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 102;
+    cursor: e-resize;
+    background-color: rgba(49, 44, 44, 0.15);
+}
+.smallLine{
+    width: 2px;
+    position: absolute;
+    top: 0;
+    z-index: 101;
+    background: rgba(0, 0, 0, 0.29);
+}
+.smallLineY{
+    height: 2px;
+    position: absolute;
+    margin-top: 10px;
+    z-index: 103;
+    background: rgba(0, 0, 0, 0.29);
+}
+.smallLineY1{
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    margin-top: 10px;
+    left: 6px;
+    top: 2%;
+    z-index: 103;
+    background: #000;
+}
+
+.smallLine2{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    margin-top: 10px;
+    left: 2%;
+    top: 0;
+    z-index: 101;
+    background: #000;
+}
+.smallLine3{
+    width: 2px;
+    height: 50%;
+    position: absolute;
+    margin-top: 10px;
+    left: 3%;
+    top: 0;
+    z-index: 101;
+    background: #000;
+}
+.smallLine4{
+    width: 2px;
+    height: 50%;
+    position: absolute;
+    margin-top: 10px;
+    left: 4%;
+    top: 0;
+    z-index: 101;
+    background: #000;
+}
+.smallLine5{
+    width: 2px;
+    height: 70%;
+    position: absolute;
+    left: 5%;
+    margin-top: 6px;
+    top: 0;
+    z-index: 101;
+    background: #000;
+}
+
+
+.rightSel{
+    width: 3vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid rgba(36, 34, 34, 0.11);
+    border-left: 1px solid rgba(36, 34, 34, 0.11);
+
+
+}
+.rIcon{
+    width: 2vw;
+    height: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6vh;
+    cursor: pointer;
+
+}
+
+.rightVal{
+    width: 17vw;
+    height: 100vh;
+    overflow: auto;
+}
+.rightValTitle{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content:center ;
+    border-top: 0.5px solid rgba(36, 34, 34, 0.11);
+    position: relative;
+    border-bottom: 0.5px solid rgba(36, 34, 34, 0.11);
+    overflow: hidden;
+}
+.rightValContent4{
+    height: 1vh;
+    overflow: hidden;
+}
+.in{
+    outline-style: none ;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 70px;
+    padding: 4px 4px;
+    font-size: 14px;
+    margin-left: 20px;
+}
+.rightValContent3_1_1{
+    margin-left: 23px;
+}
+.rightValContent3_2_1{
+    margin-left: 23px;
+}
+.rightValContent3_3_1{
+    margin-left: 23px;
+}
+.rightValContent3_2_22{
+    margin-left: 15px;
+}
+.rightValContent3{
+    height: 1vh;
+    overflow: hidden;
+}
+.mo{
+    margin-top: 10px;
+}
+.in3{
+    outline-style: none ;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 70px;
+    padding: 4px 4px;
+    font-size: 14px;
+    margin-left: 22px;
+
+}
+.rightValContent2{
+    height: 1vh;
+    overflow: hidden;
+}
+.rightValContent3_2_22{
+    display: flex;
+    width: 100%;
+}
+.rightValContent3_2_2{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    color: white;
+    background-color: rgba(7, 102, 186, 0.64);
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.rightValContent1_in1{
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.Content1in0{
+    margin-left: 28px;
+
+}
+.Content1in1{
+    margin-left: 28px;
+
+}
+.Content1in4{
+    margin-left: 31px;
+
+}
+.rightValTitle1_0{
+    color: rgba(33, 122, 208, 0.75);
+    font-size: 20px;
+    cursor: pointer;
+}
+.picIcon{
+    width: 4vw;
+    height: 5vw;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
+
+
+
+
+
+.picImg{
+    width: 2vw;
+    height: 2vw;
+    background-size: 100% 100%;
+}
+.rIconImg{
+    width: 2vw;
+    height: 2vw;
+    background-size: 100% 100%;
+}
+.clour{
+    cursor: pointer;
+}
+.clour1{
+    background-color: rgb(148, 151, 255);
+}
+.clour2{
+    background-color: #111138;
+}
+
+.clour3{
+    background-color: #4ab157;
+}
+.clour4{
+    background-color: #9e1b58;
+}
+
+.clour5{
+    background-color: #cec466;
+}
+
+.clour6{
+    background-color: #348645;
+}
+
+.clour7{
+    background-color: #e79c79;
+}
+.clour8{
+    background-color: rgba(148, 221, 255, 0.61);
+}
+.clour9{
+    background-color: rgba(92, 121, 53, 0.25);
+}
+.clour10{
+    background-color: #1f663f;
+}
+.clour11{
+    background-color: rgba(18, 19, 71, 0.16);
+}
+.clour12{
+    background-color: rgba(148, 225, 255, 0.56);
+}
+
+.box{
+    width: 200px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: 0.5px solid rgba(36, 34, 34, 0.11);
+
+}
+.box1{
+    width: 50px;
+    height: 50px;
+    background: url(https://cdn.cnbj1.fds.api.mi-img.com/middle.community.vip.bkt/6be96e1726c383601009a581c7117ead) no-repeat center center;
+    background-size:50px 50px;
+    margin-top: 5px;
+}
+.del{
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/middle.community.vip.bkt/d1867c766244b96af0e8bac40977d861);
+    background-size: 100%,100%;
+}
+
+.box1_1{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%,100%;
+
+}
+.maskBlack{
+    width: 100%;
+    height: 100%;
+    background-color: #383838;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 199;
+    opacity: 0.5;
+    display: none;
+    background-color: #383838;
+}
+.mask{
+    width: 500px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    display: none;
+
+    left: 30vw;
+    top: -300px;
+    z-index: 200;
+}
+.mask1{
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid rgba(12, 122, 234, 0.64);
+
+}
+.mask_t1{
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+
+}
+.mask_t2{
+    margin-left: 50px;
+    margin-top: 15px;
+    color: rgba(33, 122, 208, 0.75);
+    cursor: pointer;
+
+}
+.mask_t3{
+    margin-left: 65px;
+    margin-top: 15px;
+    cursor: pointer;
+
+}
+.mask_t4{
+    margin-left: 50px;
+    margin-top: 15px;
+    cursor: pointer;
+
+}
+
+.mask2{
+    width: 75%;
+    height: 100%;
+}
+.boxTemp{
+    display: none;
+}
+
